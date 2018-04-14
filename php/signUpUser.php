@@ -18,7 +18,7 @@
 				throw new PDOException("Can't execute to register".$e -> getMessage());
 			}
 			else{
-				//User's logged in
+			
 				echo "Account created";
 			}
 		}

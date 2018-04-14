@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>User connect</title>
+	<title>Org connect</title>
 </head>
 <body>
 
@@ -17,7 +17,7 @@
 			e.preventDefault();
 
 			$.ajax({
-				url: "php/signUpUser.php",
+				url: "php/connectOrg.php",
 				method: "POST",
 				data: {
 					mail: document.getElementById("mail").value,
