@@ -29,6 +29,7 @@ CREATE TABLE project(
 	description BLOB NOT NULL,
 	amountWanted INT NOT NULL,
 	amountCollected INT NOT NULL,
+	datetime DATETIME DEFAULT NOW() NOT NULL,
 	PRIMARY KEY(ID),
 	FOREIGN KEY(organisationID) REFERENCES accountOrganisation(ID) ON DELETE CASCADE
 )Engine=InnoDB;
@@ -38,6 +39,7 @@ CREATE TABLE donations(
 	accountID INT NOT NULL,
 	projectID INT NOT NULL,
 	amount ID DEFAULT 0 NOT NULL,
+	datetime DATETIME DEFAULT NOW() NOT NULL,
 	PRIMARY KEY(ID),
 	FOREIGN KEY(accountID) REFERENCES accountUser(ID) ON DELETE CASCADE,
 	FOREIGN KEY(projectID) REFERENCES project(ID) ON DELETE CASCADE
