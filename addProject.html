@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<form>
+		<input type="text" id="name"/>
+		<textarea id="description">
+			
+		</textarea>
+		<input type="text" id="objective"/>
+		<input type="number" id="amountWanted"/>
+		<input type="submit" id="btnSubmit"/>
+	</form>
+
+	<script src="js/jquery.min.js"></script>
+	<script>
+		document.getElementById("btnSubmit").addEventListener("click",function(e){
+			e.preventDefault();
+
+			$.ajax({
+				url: "php/addProject.php",
+				method: "POST",
+				data: {
+					name: document.getElementById("name").value,
+					description: document.getElementById("description").value,
+					objective: document.getElementById("objective").value,
+					amountWanted: document.getElementById("amountWanted").value,
+				},
+				success: function(msg){
+					if(msg != ""){
+						alert(msg); //Gives an error if pwd/mail are wrong
+					}
+					else{
+						alert("Project created");
+					}
+				}
+			});
+		},false);
+	</script>
+</body>
+</html>
