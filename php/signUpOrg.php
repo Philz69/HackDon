@@ -8,7 +8,7 @@
 		$hash = password_hash($_POST["pwd"], PASSWORD_DEFAULT);
 
 		try{
-			$createAccount = $db -> prepare("INSERT INTO organismes VALUES (DEFAULT,:name,:pwd,:description)");
+			$createAccount = $db -> prepare("INSERT INTO accountorganisation VALUES (DEFAULT,:name,:mail,:pwd,:description,DEFAULT,DEFAULT,DEFAULT)");
 			$createAccount -> bindValue(":name",$_POST["name"]);
 			$createAccount -> bindValue(":mail",$_POST["mail"]);
 			$createAccount -> bindValue(":pwd",$hash);
@@ -19,6 +19,7 @@
 			}
 			else{
 				//User's logged in
+				echo "Logged in";
 			}
 		}
 		catch(PDOException $e){
