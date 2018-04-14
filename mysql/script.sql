@@ -8,7 +8,7 @@ CREATE TABLE accountOrganisation(
 	description BLOB NOT NULL,
 	bannerImg BLOB NOT NULL,
 	code VARCHAR(255) NOT NULL,
-	datetime DATETIME DEFAULT NOW() NOW NULL,
+	datetime DATETIME DEFAULT NOW() NOT NULL,
 	PRIMARY KEY(ID)
 )Engine=InnoDB;
 
