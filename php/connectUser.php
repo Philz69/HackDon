@@ -19,7 +19,7 @@
 					$_SESSION["Id_user"] = $connectInfos["Id"];
 				}
 				else{//Connection didn't work
-					echo "Wrong mail/password";
+					echo "Wrong password/mail";
 				}	
 			}
 
