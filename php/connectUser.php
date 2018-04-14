@@ -3,7 +3,8 @@
 	if(!empty($_POST["mail"]) && !empty($_POST["pwd"]))
 	{
 		require_once("connectionDb.php");
-
+		$db = connectDb();
+		
 		try{
 			$connectOrg = $db -> prepare("SELECT Id,passwordHash FROM accountuser WHERE email = :mail");
 			$connectOrg -> bindValue(":mail",$_POST["mail"]);
