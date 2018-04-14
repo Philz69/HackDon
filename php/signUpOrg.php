@@ -1,7 +1,7 @@
 <?php
 	//Inscription des organismes sur le site 
 
-	if(!empty($_POST["name"]) && !empty($_POST["mail"]) && !empty($_POST["pwd"]) && !empty($_POST["description"]))
+	if(!empty($_POST["name"]) && !empty($_POST["mail"]) && !empty($_POST["pwd"]))
 	{
 		require_once("connectionDb.php");
 		$db = connectDb();
@@ -14,7 +14,7 @@
 			$createAccount -> bindValue(":mail",$_POST["mail"]);
 			$createAccount -> bindValue(":pwd",$hash);
 			$createAccount -> bindValue(":code","qwerty");
-			$createAccount -> bindValue(":description",$_POST["description"]);
+			$createAccount -> bindValue(":description","Desc temporaire");
 			$createAccount -> bindValue(":banner","jhasdkjasd");
 
 			if(!$createAccount -> execute()){

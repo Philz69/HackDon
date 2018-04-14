@@ -18,6 +18,7 @@
 
 				if(password_verify($_POST["pwd"],$connectInfos["passwordHash"])){//User's connected
 					$_SESSION["Id_org"] = $connectInfos["Id"];
+					echo "Connected";
 				}
 				else{//Connection didn't work
 					echo "Wrong mail/password";
