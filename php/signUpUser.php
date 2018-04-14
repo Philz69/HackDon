@@ -3,8 +3,9 @@
 	//Enregistrement de l'utilisateur
 	if(!empty($_POST["name"]) && !empty($_POST["mail"]) && !empty($_POST["pwd"]))
 	{
-		require_once("connexionDb.php");
-
+		require_once("connectionDb.php");
+		$db = connectDb();
+		
 		$hash = password_hash($_POST["pwd"], PASSWORD_DEFAULT);
 
 		try{
@@ -17,8 +18,8 @@
 				throw new PDOException("Can't execute to register".$e -> getMessage());
 			}
 			else{
-				//User's logged in
-				echo "Logged in";
+			
+				echo "Account created";
 			}
 		}
 		catch(PDOException $e){
