@@ -1,5 +1,5 @@
 <?php
-	$_SESSION["Id_org"] = 1;
+
 	//Charge tout les projets d'un organisme dans des <option>
 	function loadProjects(){
 
