@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>User signUp</title>
+	<title>Org signUp</title>
 </head>
 <body>
 
@@ -9,6 +9,9 @@
 		<input type="text" name="name" id="name"/>
 		<input type="text" name="mail" id="mail"/>
 		<input type="password" name="pwd" id="pwd"/>
+		<textarea id="description">
+			
+		</textarea>
 		<input type="submit" id="btnSubmit" />	
 	</form>
 
@@ -18,19 +21,20 @@
 			e.preventDefault();
 
 			$.ajax({
-				url: "php/signUpUser.php",
+				url: "php/signUpOrg.php",
 				method: "POST",
 				data: {
 					name: document.getElementById("name").value,
 					mail: document.getElementById("mail").value,
 					pwd: document.getElementById("pwd").value,
+					description: document.getElementById("description").value,
 				},
 				success: function(msg){
 					if(msg != ""){
 						alert(msg); //Gives an error if pwd/mail are wrong
 					}
 					else{
-						alert("connected");
+						alert("Registred");
 					}
 				}
 			});

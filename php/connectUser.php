@@ -1,4 +1,5 @@
 <?php
+	session_start();
 	//Connexion de l'utilisateur
 	if(!empty($_POST["mail"]) && !empty($_POST["pwd"]))
 	{
