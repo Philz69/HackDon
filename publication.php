@@ -35,7 +35,8 @@
 				},
 				success: function(msg){
 					alert(msg);
-			}}); 
+				}
+			}); 
 		},false);
 
 
