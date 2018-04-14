@@ -1,5 +1,7 @@
 CREATE DATABASE hackDon CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
+USE hackDon;
+
 CREATE TABLE accountOrganisation(
 	ID INT AUTO_INCREMENT NOT NULL,
 	name VARCHAR(255) NOT NULL,
@@ -8,7 +10,7 @@ CREATE TABLE accountOrganisation(
 	description BLOB NOT NULL,
 	bannerImg BLOB NOT NULL,
 	code VARCHAR(255) NOT NULL,
-	datetime DATETIME DEFAULT NOW() NOW NULL,
+	datetime DATETIME DEFAULT NOW() NOT NULL,
 	PRIMARY KEY(ID)
 )Engine=InnoDB;
 
@@ -29,6 +31,7 @@ CREATE TABLE project(
 	description BLOB NOT NULL,
 	amountWanted INT NOT NULL,
 	amountCollected INT NOT NULL,
+	datetime DATETIME DEFAULT NOW() NOT NULL,
 	PRIMARY KEY(ID),
 	FOREIGN KEY(organisationID) REFERENCES accountOrganisation(ID) ON DELETE CASCADE
 )Engine=InnoDB;
@@ -37,7 +40,8 @@ CREATE TABLE donations(
 	ID INT AUTO_INCREMENT NOT NULL,
 	accountID INT NOT NULL,
 	projectID INT NOT NULL,
-	amount ID DEFAULT 0 NOT NULL,
+	amountID INT DEFAULT 0 NOT NULL,
+	datetime DATETIME DEFAULT NOW() NOT NULL,
 	PRIMARY KEY(ID),
 	FOREIGN KEY(accountID) REFERENCES accountUser(ID) ON DELETE CASCADE,
 	FOREIGN KEY(projectID) REFERENCES project(ID) ON DELETE CASCADE
