@@ -21,15 +21,6 @@ for(let i =0;i < btn.length;i++)
     }());
 }
 
-
-
-document.getElementById("btnSubmit").addEventListener("click",function(e){
-	e.preventDefault();
-
-},false);
-
-
-
 function connection(id){
 	$.ajax({
 		url: "php/"+id,
