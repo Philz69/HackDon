@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<form>
+		<input type="number" id="donate"/>
+		<input type="submit" id="btnSubmit" class="donation1"/> <!-- La classe devra être changer lorsque tout sera chargé via Sql -->
+	</form>
+
+	<script src="js/jquery.min.js"></script>
+	<script>
+
+		document.getElementById("btnSubmit").addEventListener("click",function(e){
+			e.preventDefault();
+
+			$.ajax({
+				url: "php/addDon.php",
+				method: "POST",
+				data: {
+					amountDon: document.getElementById("donate").value,
+					projectID: document.getElementById("btnSubmit").classList[0].split("donation")[1],
+				},
+				success: function(msg){
+					if(msg != ""){
+						//Le don a fonctionner
+					}
+				}
+			});
+		},false);
+	</script>
+</body>
+</html>
