@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>User connect</title>
+</head>
+<body>
+
+	<form>
+		<input type="text" name="mail" id="mail"/>
+		<input type="password" name="pwd" id="pwd"/>
+		<input type="submit" id="btnSubmit" />	
+	</form>
+
+	<script src="js/jquery.min.js"></script>
+	<script>
+		document.getElementById("btnSubmit").addEventListener("click",function(e){
+			e.preventDefault();
+
+			$.ajax({
+				url: "php/connectUser.php",
+				method: "POST",
+				data: {
+					mail: document.getElementById("mail").value,
+					pwd: document.getElementById("pwd").value,
+				},
+				success: function(msg){
+					if(msg != ""){
+						alert(msg); //Gives an error if pwd/mail are wrong
+					}
+					else{
+						alert("connected");
+					}
+				}
+			});
+		},false);
+	</script>
+</body>
+</html>
