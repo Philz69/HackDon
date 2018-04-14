@@ -1,11 +1,11 @@
 <?php
-	//Connexion de l'organisme
+	//Connexion de l'utilisateur
 	if(!empty($_POST["mail"]) && !empty($_POST["pwd"]))
 	{
 		require_once("connectionDb.php");
 
 		try{
-			$connectOrg = $db -> prepare("SELECT Id,passwordHash FROM accountorganisation WHERE email = :mail");
+			$connectOrg = $db -> prepare("SELECT Id,passwordHash FROM accountuser WHERE email = :mail");
 			$connectOrg -> bindValue(":mail",$_POST["mail"]);
 
 			if(!$connectOrg -> execute()){
@@ -15,7 +15,7 @@
 				$connectInfos = $connectOrg -> fetch();
 
 				if(password_verify($_POST["pwd"],$connectInfos["passwordHash"])){//User's connected
-					$_SESSION["Id_org"] = $connectInfos["Id"];
+					$_SESSION["Id_user"] = $connectInfos["Id"];
 				}
 				else{//Connection didn't work
 					echo "Wrong mail/password";
