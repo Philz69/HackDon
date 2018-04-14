@@ -4,7 +4,8 @@
 	if(!empty($_POST["name"]) && !empty($_POST["mail"]) && !empty($_POST["pwd"]))
 	{
 		require_once("connexionDb.php");
-
+		$db = connectDb();
+		
 		$hash = password_hash($_POST["pwd"], PASSWORD_DEFAULT);
 
 		try{
