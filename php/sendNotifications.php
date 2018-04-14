@@ -14,5 +14,5 @@
 	}
 
 	//Ajouter la notification
-	sendNotification($POST["accountID"], $POST["projectID"], $POST["content"]);
+	sendNotification($_POST["accountID"], $_POST["projectID"], $_POST["content"]);
 ?>
