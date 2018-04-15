@@ -9,7 +9,6 @@ $( document ).ready(function() {
             $('#loginbtn').hide();
             $('#signupbtn').show();
         if($('#signupOrg').css('display') == 'none') {
-            alert('hide usr signup');
             $('#signupUsr').hide();
             $('#loginUsr').show();
         }
