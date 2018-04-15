@@ -10,24 +10,27 @@
     <script src="js/include.js"></script>
     <script src="js/loginAjax.js"></script>
     <script src="js/popuphandler.js"></script>
+    <meta charset="utf-8"/>
     <body>
         <div class="include-nav"></div>
         <div class="include-login"></div>
 
         <div class="jumbotron">
-            <h3 class="display-4">test</h3>
-            <p class="lead">description</p>
+            <h3 class="display-4">Croix rouge</h3>
+            <p class="lead">La Croix-Rouge française (CRf) est une association d'aide humanitaire française fondée en 1864. Elle a pour objectif de venir en aide aux personnes en difficulté en France et à l'étranger. Ses missions fondamentales sont l'urgence et le secourisme, l'action sociale, la formation, la santé et l'action internationale.
+
+            Reconnue d'utilité publique depuis 1945, la Croix-Rouge française est l'une des 190 sociétés nationales du Mouvement international de la Croix-Rouge et du Croissant-Rouge. Elle compte plus de 59 000 bénévoles et 18 000 salariés1. Son réseau est constitué de 1 019 implantations locales, 108 délégations départementales et territoriales et 573 établissements sociaux, </p>
         </div>
         <div class="jumbotron">
             <div class="row">
-            <div class="col-4"><canvas id="pieChart"></canvas></div>
+                <div class="col-4"><canvas id="pieChart"></canvas></div>
             </div>
     <script>
         var ctxP = document.getElementById("pieChart").getContext('2d');
 var myPieChart = new Chart(ctxP, {
     type: 'pie',
     data: {
-        labels: ["Red", "Green", "Yellow", "Grey", "Dark Grey"],
+        labels: ["Urgence et secourisme", "Dispositifs prévisionnels de secours (DPS)", "Le Réseau de Secours (PSR)", "La formation du grand public", "La prévention"],
         datasets: [
             {
                 data: [300, 50, 100, 40, 120],
@@ -46,56 +49,57 @@ var myPieChart = new Chart(ctxP, {
         <div class="row">    
         <div class="col-auto">
                                     <div class="card" style="width: 18rem;">
-                                            <img class="card-img-top" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22286%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20286%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_162c5d95e24%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A14pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_162c5d95e24%22%3E%3Crect%20width%3D%22286%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22101.875%22%20y%3D%2296.3%22%3E286x180%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" alt="Card image cap" >
+                                            <img class="card-img-top" src="images/img1.jpg" alt="Card image cap" >
                                             <div class="card-body px-1">
-                                                <h5 class="card-title">Card title</h5>
-                                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                                <a href="#" class="btn btn-primary">Give now</a>
+                                                <h5 class="card-title">Urgence et secourisme</h5>
+                                                <p class="card-text">Le secourisme est un domaine très encadré et réglementé, depuis la préparation des dispositifs jusqu’à leur déploiement. Les bénévoles sont formés et équipés dans un schéma de secours organisé par un même corps de pratiques.</p>
+                                                <a href="#" class="btn btn-primary">Faire un don</a>
                                             </div>
                                     </div>
         </div><div class="col-auto">
                                     <div class="card" style="width: 18rem;">
-                                            <img class="card-img-top" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22286%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20286%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_162c5d95e24%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A14pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_162c5d95e24%22%3E%3Crect%20width%3D%22286%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22101.875%22%20y%3D%2296.3%22%3E286x180%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" alt="Card image cap" >
+                                            <img class="card-img-top" src="images/img2.jpg" alt="Card image cap" >
                                             <div class="card-body px-1">
-                                                <h5 class="card-title">Card title</h5>
-                                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                                <a href="#" class="btn btn-primary">Give now</a>
+                                                <h5 class="card-title">Dispositifs prévisionnels de secours (DPS)</h5>
+                                                <p class="card-text">Composé de deux équipiers secouristes (PSE 2) ou d'un équipier secouriste (PSE 2) et d'un secouriste (PSE 1). Leur matériel correspond à un lot C (un lot de premiers secours et un lot d'oxygénothérapie) plus un DSA (défibrillateur semi-automatique).</p>
+                                                <a href="#" class="btn btn-primary">Faire un don</a>
                                             </div>
                                     </div>
         </div><div class="col-auto">
                                     <div class="card" style="width: 18rem;">
-                                            <img class="card-img-top" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22286%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20286%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_162c5d95e24%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A14pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_162c5d95e24%22%3E%3Crect%20width%3D%22286%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22101.875%22%20y%3D%2296.3%22%3E286x180%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" alt="Card image cap" >
+                                            <img class="card-img-top" src="images/img3.jpg" alt="Card image cap" >
                                             <div class="card-body px-1">
-                                                <h5 class="card-title">Card title</h5>
-                                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                                <a href="#" class="btn btn-primary">Give now</a>
+                                                <h5 class="card-title">Le Réseau de Secours (PSR)</h5>
+                                                <p class="card-text">Dans plusieurs départements d'Île-de-France (Paris, Hauts-de-Seine, Val-de-Marne, Seine-Saint-Denis, Val-d'Oise, Seine-et-Marne, Essonne), la Croix-Rouge française participe aux secours d'urgence en tant qu'équipe de première.</p>
+                                                <a href="#" class="btn btn-primary">Faire un don</a>
                                             </div>
                                     </div>
         </div><div class="col-auto">
                                     <div class="card" style="width: 18rem;">
-                                            <img class="card-img-top" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22286%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20286%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_162c5d95e24%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A14pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_162c5d95e24%22%3E%3Crect%20width%3D%22286%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22101.875%22%20y%3D%2296.3%22%3E286x180%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" alt="Card image cap" >
+                                            <img class="card-img-top" src="images/img4.jpg" alt="Card image cap" >
                                             <div class="card-body px-1">
-                                                <h5 class="card-title">Card title</h5>
-                                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                                <a href="#" class="btn btn-primary">Give now</a>
+                                                <h5 class="card-title">Campagne pour la formation du grand public</h5>
+                                                <p class="card-text">Le secourisme est un domaine très encadré et réglementé, depuis la préparation des dispositifs jusqu’à leur déploiement. Les bénévoles sont formés et équipés dans un schéma de secours organisé par un même corps de pratiques</p>
+                                                <a href="#" class="btn btn-primary">Faire un don</a>
                                             </div>
                                     </div>
         </div><div class="col-auto">
                                     <div class="card" style="width: 18rem;">
-                                            <img class="card-img-top" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22286%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20286%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_162c5d95e24%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A14pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_162c5d95e24%22%3E%3Crect%20width%3D%22286%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22101.875%22%20y%3D%2296.3%22%3E286x180%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" alt="Card image cap" >
+                                            <img class="card-img-top" src="images/img5.jpg" alt="Card image cap" >
                                             <div class="card-body px-1">
-                                                <h5 class="card-title">Card title</h5>
-                                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                                <a href="#" class="btn btn-primary">Give now</a>
+                                                <h5 class="card-title">Campagne pour la prévention</h5>
+                                                <p class="card-text">Les premières minutes suivant un accident sont cruciales, notamment en ce qui concerne la prise en charge des victimes. Savoir comment réagir dans la panique et connaître les bons gestes à adopter fait souvent la différence en attendant la venue des secours.</p>
+                                                <a href="#" class="btn btn-primary">Faire un don</a>
                                             </div>
                                     </div>
         </div><div class="col-auto">
                                     <div class="card" style="width: 18rem;">
-                                            <img class="card-img-top" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22286%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20286%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_162c5d95e24%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A14pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_162c5d95e24%22%3E%3Crect%20width%3D%22286%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22101.875%22%20y%3D%2296.3%22%3E286x180%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" alt="Card image cap" >
+                                            <img class="card-img-top" src="images/img6.jpg" alt="Card image cap" >
                                             <div class="card-body px-1">
-                                                <h5 class="card-title">Card title</h5>
-                                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                                <a href="#" class="btn btn-primary">Give now</a>
+                                                <h5 class="card-title">Action sociale</h5>
+                                                    <p class="card-text">
+                                                         Un VPSP de la Croix-Rouge française.Un des postes de commandement de la Croix-Rouge française.Action socialeL’exclusion naît d’une situation précaire, et la précarité ne se réduit pas à la pauvreté économique.</p>
+                                                <a href="#" class="btn btn-primary">Faire un don</a>
                                             </div>
                                     </div>
         </div>
