@@ -9,7 +9,7 @@
 		$hash = password_hash($_POST["pwd"], PASSWORD_DEFAULT);
 
 		try{
-			$createAccount = $db -> prepare("INSERT INTO accountorganisation VALUES (DEFAULT,:name,:mail,:pwd,:description,:banner,:code,NOW())");
+			$createAccount = $db -> prepare("INSERT INTO accountOrganisation VALUES (DEFAULT,:name,:mail,:pwd,:description,:banner,:code,NOW())");
 			$createAccount -> bindValue(":name",$_POST["name"]);
 			$createAccount -> bindValue(":mail",$_POST["mail"]);
 			$createAccount -> bindValue(":pwd",$hash);
