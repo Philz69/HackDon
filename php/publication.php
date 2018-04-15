@@ -12,7 +12,7 @@
 				$addPost = $db -> prepare("INSERT INTO publications VALUES (DEFAULT,:orgID,:projectID,:message,NOW())");
 
 				$addPost -> bindValue(":orgID",$_SESSION["Id_org"]);
-				$addPost -> bondValue(":projectID",$_POST["projectID"]);
+				$addPost -> bindValue(":projectID",$_POST["projectID"]);
 				$addPost -> bindValue(":message",$_POST["message"]);
 
 				if(!$addPost -> execute()){
