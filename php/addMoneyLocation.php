@@ -6,11 +6,11 @@
       $projectID = (int)$projectID;
 
       $db = connectDB();
-      $query_loc = $db->prepare("INSERT INTO moneyLocations(projectID, address, latlng) VALUES(:projectID, :$address, :$latlng)");
+      $query_loc = $db->prepare("INSERT INTO moneyLocations(projectID, address, latlng) VALUES(:projectID, :address, :latlng)");
 
       $query_loc->bindParam(":projectID", $projectID);
-      $query_loc->bindParam(":$address", $address);
-      $query_loc->bindParam(":$latlng", $latlng);
+      $query_loc->bindParam(":address", $address);
+      $query_loc->bindParam(":latlng", $latlng);
 
       $query_loc->execute();
     }
