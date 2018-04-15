@@ -5,14 +5,22 @@ function initMap() {
     center: {lat: 33, lng: 25}
   });
 
+window.markerCluster = new MarkerClusterer(map, [], {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
+
   // Add some markers to the map.
   // Note: The code uses the JavaScript Array.prototype.map() method to
   // create an array of markers based on a given "locations" array.
   // The map() method here has nothing to do with the Google Maps API.
   getLocationsFromDB(function(locations){
-    var markers = locations.map(function(location, i) {
+    var i=0;
+    var latlngs=[];
+    for(var k in locations){
+        latlngs[i] = JSON.parse(locations[k].latlng);
+        ++i;
+    }
+    var markers = latlngs.map(function(latlng, i) {
       return new google.maps.Marker({
-        position: location
+        position: latlng
       });
     });
 
@@ -81,6 +89,11 @@ function addLocationToDB(address, latlngStr){
 
 function getLocationsFromDB(callback){//ProjectID IS TEMPORARY
   $.post("php/getMoneyLocations.php",{"projectID": 1}, function(data){
-    callback(JSON.parse(JSON.parse(data)));
+    if(data !== null && data.trim() !== ""){
+      data = JSON.parse(data);
+      if(data.length > 0){
+        callback(data);
+      }
+    }
   });
 }
