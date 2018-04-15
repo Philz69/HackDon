@@ -1,57 +1,57 @@
 $( document ).ready(function() {
     $("#usrswitchbtn").livequery(function(){
-    $('#loginUsr').hide();
-    $('#loginOrg').hide();
+    $('#connectUser').hide();
+    $('#connectOrg').hide();
     $('#signupOrg').hide();
     $('#signupbtn').hide();
     $('#usrswitchbtn').hide();
-    
+
     $('#loginbtn').click(function() {
             $('#loginbtn').hide();
             $('#signupbtn').show();
         if($('#signupOrg').css('display') == 'none') {
-            $('#signupUsr').hide();
-            $('#loginUsr').show();
+            $('#signupUser').hide();
+            $('#connectUser').show();
         }
         else {
            $('#signupOrg').hide();
-           $('#loginOrg').show();
+           $('#connectOrg').show();
         }
     });
     $('#signupbtn').click(function() {
             $('#signupbtn').hide();
             $('#loginbtn').show();
-        if($('#loginOrg').css('display') == 'none') {
-            $('#loginUsr').hide();
-            $('#signupUsr').show();
+        if($('#connectOrg').css('display') == 'none') {
+            $('#connectUser').hide();
+            $('#signupUser').show();
         }
         else {
            $('#signupOrg').show();
-           $('#loginOrg').hide();
+           $('#connectOrg').hide();
         }
     });
     $('#usrswitchbtn').click(function() {
             $('#usrswitchbtn').hide();
             $('#orgswitchbtn').show();
-        if($('#loginOrg').css('display') == 'none') {
+        if($('#connectOrg').css('display') == 'none') {
             $('#signupOrg').hide();
-            $('#signupUsr').show();
+            $('#signupUser').show();
         }
         else {
-           $('#loginOrg').hide();
-           $('#loginUsr').show();
+           $('#connectOrg').hide();
+           $('#connectUser').show();
         }
     });
     $('#orgswitchbtn').click(function() {
             $('#orgswitchbtn').hide();
             $('#usrswitchbtn').show();
-        if($('#loginUsr').css('display') == 'none') {
-            $('#signupUsr').hide();
+        if($('#connectUser').css('display') == 'none') {
+            $('#signupUser').hide();
             $('#signupOrg').show();
         }
         else {
-           $('#loginUsr').hide();
-           $('#loginOrg').show();
+           $('#connectUser').hide();
+           $('#connectOrg').show();
         }
     });
 

@@ -1,36 +1,31 @@
-$(document).ready(function(){
-	let btn = document.getElementsByClassName("btn");
+function setLoginOnClick(){
+	$(".submit").click(function(){
+		var form_id = this.parentNode.id;
+		console.log(form_id);
+		if(form_id == "signupOrg" || form_id == "signupUser"){
+			register(form_id);
+		}
+		else{
+			connection(form_id);
+		}
+	});
+}
 
+function connection(id){
+	var mail = document.getElementById(id).getElementsByTagName("input")[0].value;
+	var pwd = document.getElementById(id).getElementsByTagName("input")[1].value;
 
-	for(let i = 0;i < btn.length;i++)
-	{
-	
-		(function () {
-	        var form_id = btn[i].parentNode.id;
+	servConnect(id, mail,pwd);
+}
 
-	        btn[i].addEventListener("click", function(e) { 
-
-	        	e.preventDefault();
-
-	        	if(form_id == "signupOrg" || form_id == "signupUser"){
-	        		register(form_id);
-	        	} 
-	        	else{
-	        		connection(form_id);
-	        	}
-
-	        }, false);
-	    }());
-	}
-
-	function connection(id){
-		
+function servConnect(id, mail, pwd){
+	if(mail !== "" && pwd !== ""){
 		$.ajax({
 			url: "php/"+id+".php",
 			method: "POST",
 			data: {
-				mail: document.getElementById(id).getElementsByTagName("input")[0].value,
-				pwd: document.getElementById(id).getElementsByTagName("input")[1].value,
+				"mail": mail,
+				"pwd": pwd
 			},
 			success: function(msg){
 				if(msg != ""){
@@ -42,27 +37,31 @@ $(document).ready(function(){
 			}
 		});
 	}
+}
 
-	function register(id){
+function register(id){
+	var name = document.getElementById(id).getElementsByTagName("input")[0].value;
+	var mail = document.getElementById(id).getElementsByTagName("input")[1].value;
+	var pwd = document.getElementById(id).getElementsByTagName("input")[2].value;
+
+	if(name !== "" && mail !== "" && pwd !== ""){
 
 		$.ajax({
 			url: "php/"+id+".php",
 			method: "POST",
 			data: {
-				name: document.getElementById(id).getElementsByTagName("input")[0].value,
-				mail: document.getElementById(id).getElementsByTagName("input")[1].value,
-				pwd: document.getElementById(id).getElementsByTagName("input")[2].value,
+				"name": name,
+				"mail": mail,
+				"pwd": pwd
 			},
 			success: function(msg){
 				if(msg != ""){
 					alert(msg); //Gives an error if pwd/mail are wrong
-				}
-				else{
-					alert(msg);
+				}else{
+					//Log in
+					servConnect((id.indexOf("Org") > -1 ? "connectOrg" : "connectUser"), mail, pwd);
 				}
 			}
 		});
 	}
-
-
-});
+}

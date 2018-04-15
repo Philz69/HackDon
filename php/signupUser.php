@@ -5,7 +5,7 @@
 	{
 		require_once("connectionDb.php");
 		$db = connectDb();
-		
+
 		$hash = password_hash($_POST["pwd"], PASSWORD_DEFAULT);
 
 		try{
@@ -16,10 +16,6 @@
 
 			if(!$createAccount -> execute()){
 				throw new PDOException("Can't execute to register".$e -> getMessage());
-			}
-			else{
-			
-				echo "Account created";
 			}
 		}
 		catch(PDOException $e){
