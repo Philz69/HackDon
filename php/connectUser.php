@@ -7,7 +7,7 @@
 		$db = connectDb();
 		
 		try{
-			$connectOrg = $db -> prepare("SELECT Id,passwordHash FROM accountuser WHERE email = :mail");
+			$connectOrg = $db -> prepare("SELECT Id,passwordHash FROM accountUser WHERE email = :mail");
 			$connectOrg -> bindValue(":mail",$_POST["mail"]);
 
 			if(!$connectOrg -> execute()){
