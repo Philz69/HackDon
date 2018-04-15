@@ -1,4 +1,6 @@
 <?php
+	require_once("gameScore.php");
+
 	//Ajoute un dons à une certaine fondation/projet
 	session_start();
 
@@ -6,7 +8,7 @@
 	{
 		require_once("connectionDb.php");
 		$db = connectDb();
-		
+
 		try{
 			$addDon = $db -> prepare("INSERT INTO donations VALUES (DEFAULT,:accountID,:projectID,:amount,NOW())");
 
@@ -22,7 +24,7 @@
 
 			if(!$addDon -> execute()){
 				throw new PDOException("Can't donate".$e -> getMessage());
-					
+
 			}
 			else{
 				//Le don a fonctionner
@@ -31,6 +33,7 @@
 		catch(PDOException $e){
 			echo "Can't connect".$e -> getMessage();
 		}
-	}
 
+		addScore($user, $_POST["amountDon"]);
+	}
 ?>
