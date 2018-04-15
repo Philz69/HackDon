@@ -1,0 +1,50 @@
+<html>
+    <title>Org name</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"  ></script>
+    <script src="js/livequery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/js/mdb.min.js"></script>
+    <script src="js/include.js"></script>
+    <script src="js/loginAjax.js"></script>
+    <script src="js/popuphandler.js"></script>
+    <body>
+        <div class="include-nav"></div>
+        <div class="include-login"></div>
+
+        <div class="jumbotron">
+            <h3 class="display-4">test</h3>
+            <p class="lead">description</p>
+        </div>
+        <div class="jumbotron">
+            <div class="row">
+            <div class="col-4"><canvas id="pieChart"></canvas></div>
+            </div>
+    <script>
+        var ctxP = document.getElementById("pieChart").getContext('2d');
+var myPieChart = new Chart(ctxP, {
+    type: 'pie',
+    data: {
+        labels: ["Red", "Green", "Yellow", "Grey", "Dark Grey"],
+        datasets: [
+            {
+                data: [300, 50, 100, 40, 120],
+                backgroundColor: ["#F7464A", "#46BFBD", "#FDB45C", "#949FB1", "#4D5360"],
+                hoverBackgroundColor: ["#FF5A5E", "#5AD3D1", "#FFC870", "#A8B3C5", "#616774"]
+            }
+        ]
+    },
+    options: {
+        responsive: true
+    }
+});
+</script>
+
+        </div>
+            
+
+        <div class="include-footer"></div>
+    </body>
+</html>
