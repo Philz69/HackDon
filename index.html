@@ -7,7 +7,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="js/include.js"></script>
-    <script src="js/connectAjax.js"></script>
+    <script src="js/loginAjax.js"></script>
     <script src="js/popuphandler.js"></script>
     <body>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -88,7 +88,8 @@
                     </div>
                     <div class="modal-body">
 
-                        <form id="connectUser">
+                        <form id="loginUsr">
+                            <h2 class="display-4">Usr log in</h2>
                             <div class="form-group" >
                                 <label for="exampleInputEmail1">Email address</label>
                                 <input type="email" class="form-control" id="mail"  placeholder="Enter email">
@@ -107,7 +108,8 @@
                             <button type="submit" class="btn btn-primary">Submit</button>
                         </form>
 
-                        <form id="connectOrg">
+                        <form id="loginOrg">
+                            <h2 class="display-4">Org log in</h2>
                             <div class="form-group" >
                                 <label for="exampleInputEmail1">Email address</label>
                                 <input type="email" class="form-control" id="mail"  placeholder="Enter email">
@@ -126,7 +128,8 @@
                             <button type="submit" class="btn btn-primary">Submit</button>
                         </form>
 
-                        <form id="signupUser">
+                        <form id="signupUsr">
+                            <h2 class="display-4">User sign up</h2>
                             <div class="form-group" >
                                 <label for="name">Name</label>
                                 <input type="name" class="form-control" id="name"  placeholder="Enter email">
@@ -150,7 +153,7 @@
                         </form>
 
                         <form id="signupOrg">
-                            <h2 class="display-4">Sign up your Org</h2>
+                            <h2 class="display-4">Org sign up</h2>
                             <div class="form-group" >
                                 <label for="name">Name</label>
                                 <input type="name" class="form-control" id="name"  placeholder="Enter email">
