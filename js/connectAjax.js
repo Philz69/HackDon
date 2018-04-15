@@ -33,6 +33,7 @@ function servConnect(id, mail, pwd){
 				}
 				else{
 					alert("connected");
+					document.location.href = document.location.href;
 				}
 			}
 		});
