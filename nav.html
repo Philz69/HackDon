@@ -1,29 +1,41 @@
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">Don</a>
-            <ul class="navbar-nav ml-auto justify-content-end">
-                <li class="nav-item active">
-                    <a class="nav-link" href="index.html">Acceuil</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="orgs.html">Organisatiosn</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="track.html">tracker</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="orgadmin.html">orgadmin</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"data-toggle="modal" data-target="#exampleModalCenter" onClick="setLoginOnClick();">Log in / Sign up</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">placeholder</a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">placeholder</a>
-                        <a class="dropdown-item" href="#">placeholder</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">placeholder</a>
-                    </div>
-                </li>
-            </ul>
-        </nav>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Don</a>
+    <ul class="navbar-nav ml-auto justify-content-end">
+      <li class="nav-item active">
+        <div style="position: relative; margin-right: 5px;">
+          <img src="res/notif_bell.png"/>
+          <div id="notifCount" style="position:absolute; border: 2px solid black; top: 0px; left:3px; width:20px; height:20px; border-radius: 25px; background-color: lightGreen; text-align: center; font-family: Helvetica; font-weight: bold;">0</div>
+          <div id="notifications" style="border: 1px solid black; border-radius: 15px; bottom:3px; background-color: lightGray;"></div>
+        </div>
+      </li>
+        <li class="nav-item active">
+            <a class="nav-link" href="index.html">Acceuil</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="orgs.html">Organisatiosn</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="track.html">tracker</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="orgadmin.html">orgadmin</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#"data-toggle="modal" data-target="#exampleModalCenter" onClick="setLoginOnClick();">Log in / Sign up</a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">placeholder</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">placeholder</a>
+                <a class="dropdown-item" href="#">placeholder</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">placeholder</a>
+            </div>
+        </li>
+    </ul>
+</nav>
+<script src="js/notifications.js" charset="utf-8"></script>
+<script>
+if(window.isConnected)
+  activateNotificationsService(9);
+</script>
