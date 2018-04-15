@@ -39,4 +39,12 @@ console.log(response);
 //Call the function
 $(document).ready(function(){
   setOrgsPage();
+
+  //Pour la présention
+  setTimeout(function(){
+    $('[data-orgid="975927851a894ebebe618681045728c00eb58bbec397c4d9c0ac8cf58c172d2c"]').find('h5').css( 'cursor', 'pointer' );
+    $('[data-orgid="975927851a894ebebe618681045728c00eb58bbec397c4d9c0ac8cf58c172d2c"]').find('h5').click(function(){
+      document.location.href="http://hack-don.tk/trackingmainpage.html";
+    });
+  }, 500);
 });

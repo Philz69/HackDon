@@ -1,8 +1,8 @@
 function initMap() {
 
   window.map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 2,
-    center: {lat: 33, lng: 25}
+    zoom: 14,
+    center: {lat: 45.38, lng: -71.95}
   });
 
 window.markerCluster = new MarkerClusterer(map, [], {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
@@ -76,7 +76,7 @@ $(document).ready(function(){
   });
 
   //Add the autocomplete
-  new google.maps.places.Autocomplete(document.getElementById("addressInput"), {types: ['geocode']});
+  new google.maps.places.Autocomplete(document.getElementById("addressInput"));
 });
 
 function addLocationToDB(address, latlngStr){
