@@ -2,14 +2,14 @@
   require_once("connectionDb.php");
 
   function addScore($accountID, $donationAmount){
-    if($accountID!=null){
+    if($accountID!=null && $donationAmount!=null){
       $accountID = (int)$accountID;
 
       $db = connectDB();
 
-      $result = $db->query("SELECT COUNT(ID), SUM() FROM donations WHERE accountID=$accountID;")[0];
-      $nbDonations = $result[0];
-      $totalAmount = $result[1];
+      $result = $db->query("SELECT COUNT(ID) AS count, SUM(amount) AS sum FROM donations WHERE accountID=$accountID;")->fetch(PDO::FETCH_OBJ);
+      $nbDonations = $result["count"];
+      $totalAmount = $result["sum"];
 
       //Calcul du score
       $score = (int)(($totalAmount/log($totalAmount, 10)) + ($nbDonations*5) + (log($donationAmount, 10)*100));
