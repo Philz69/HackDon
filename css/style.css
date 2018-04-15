@@ -11,14 +11,16 @@
 .smaller-padding {
   padding: 20px !important; }
 
-.footer {
+.footer-fixed-bottom {
   position: fixed;
+  z-index: 19999 !important;
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: red;
-  color: white;
   text-align: center; }
+
+.footer {
+  color: white; }
 
 .padding-top {
   padding-top: 20px; }
