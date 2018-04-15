@@ -24,13 +24,19 @@
         <div class="jumbotron">
             <div class="row">
                 <div class="col-4"><canvas id="pieChart"></canvas></div>
+                <ul style="list-style-type: none;">
+                    <li><span style="background-color: #F7464A;color:#F7464A;margin-right:5px">color</span>Urgence et secourisme</li>
+                    <li><span style="background-color: #46BFBD;color:#46BFBD;margin-right:5px">color</span>Dispositifs prévisionnels de secours (DPS)</li>
+                    <li><span style="background-color: #FDB45C;color:#FDB45C;margin-right:5px">color</span>Le Réseau de Secours (PSR)</li>
+                    <li><span style="background-color: #949FB1;color:#949FB1;margin-right:5px">color</span>La formation du grand public</li>
+                    <li><span style="background-color: #4D5360;color:#4D5360;margin-right:5px">color</span>La prévention</li>
+                </ul>
             </div>
     <script>
         var ctxP = document.getElementById("pieChart").getContext('2d');
 var myPieChart = new Chart(ctxP, {
     type: 'pie',
     data: {
-        labels: ["Urgence et secourisme", "Dispositifs prévisionnels de secours (DPS)", "Le Réseau de Secours (PSR)", "La formation du grand public", "La prévention"],
         datasets: [
             {
                 data: [300, 50, 100, 40, 120],
@@ -60,7 +66,7 @@ var myPieChart = new Chart(ctxP, {
                                     <div class="card" style="width: 18rem;">
                                             <img class="card-img-top" src="images/img2.jpg" alt="Card image cap" >
                                             <div class="card-body px-1">
-                                                <h5 class="card-title">Dispositifs prévisionnels de secours (DPS)</h5>
+                                                <h5 class="card-title">Besoin de dispositifs</h5>
                                                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque urna sem, vulputate sit amet lectus nec, venenatis aliquam dolor. Pellentesque finibus suscipit semper. Sed mollis placerat odio, et interdum lorem hendrerit vel. Etiam pharetra elit quis purus maximus eleifend. Curabitur non lorem scelerisque tortor euismod</p>
                                                 <a href="#" class="btn btn-primary">Faire un don</a>
                                             </div>
@@ -69,7 +75,7 @@ var myPieChart = new Chart(ctxP, {
                                     <div class="card" style="width: 18rem;">
                                             <img class="card-img-top" src="images/img3.jpg" alt="Card image cap" >
                                             <div class="card-body px-1">
-                                                <h5 class="card-title">Le Réseau de Secours (PSR)</h5>
+                                                <h5 class="card-title">Le Réseau de Secours</h5>
                                                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque urna sem, vulputate sit amet lectus nec, venenatis aliquam dolor. Pellentesque finibus suscipit semper. Sed mollis placerat odio, et interdum lorem hendrerit vel. Etiam pharetra elit quis purus maximus eleifend. Curabitur non lorem scelerisque tortor euismod</p>
                                                 <a href="#" class="btn btn-primary">Faire un don</a>
                                             </div>
@@ -78,7 +84,7 @@ var myPieChart = new Chart(ctxP, {
                                     <div class="card" style="width: 18rem;">
                                             <img class="card-img-top" src="images/img4.jpg" alt="Card image cap" >
                                             <div class="card-body px-1">
-                                                <h5 class="card-title">Campagne pour la formation du grand public</h5>
+                                                <h5 class="card-title">Campagne pour la formation</h5>
                                                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque urna sem, vulputate sit amet lectus nec, venenatis aliquam dolor. Pellentesque finibus suscipit semper. Sed mollis placerat odio, et interdum lorem hendrerit vel. Etiam pharetra elit quis purus maximus eleifend. Curabitur non lorem scelerisque tortor euismod</p>
                                                 <a href="#" class="btn btn-primary">Faire un don</a>
                                             </div>
