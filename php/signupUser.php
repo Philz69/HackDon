@@ -23,7 +23,7 @@
 			}
 		}
 		catch(PDOException $e){
-			echo "Can't register";
+			echo "Can't register".$e -> getMessage();
 			exit;
 		}
 
