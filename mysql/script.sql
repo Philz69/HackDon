@@ -80,5 +80,9 @@ CREATE TABLE publications(
 INSERT INTO accountUser(name, email, passwordHash) VALUES("bob", "bob@bob.com", "");
 INSERT INTO accountOrganisation(name, email, passwordHash, description, code) VALUES("CHUS", "fondation@chus.org", "", "Fondation du CHUS", "qwerty");
 INSERT INTO project(organisationID, name, description, objective, amountWanted) VALUES(1, "Cancer", "Rammasser de l'argent pour aider le cancer.", "TUER le cancer", 3000000);
+INSERT INTO project(organisationID, name, description, objective, amountWanted) VALUES(1, "TTM Day", "Rammasser de l'argent pour acheter un fusil pour tuer ta mere.", "TUER ta mere", 20);
 INSERT INTO notifications(accountID, projectID, content) VALUES(1, 1, "Your donations of 1$ saved 32 people!");
 INSERT INTO notifications(accountID, projectID, content) VALUES(1, 1, "Please donate more!!!!!");
+INSERT INTO donations(accountID, projectID, amount) VALUES(1, 1, 45);
+INSERT INTO donations(accountID, projectID, amount) VALUES(1, 1, 3);
+INSERT INTO donations(accountID, projectID, amount) VALUES(1, 1, 102);
