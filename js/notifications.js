@@ -20,7 +20,7 @@ function activateNotificationsService(accountID){
        notifAlert.play();
      }
     });
-  }, 10000);
+  }, 500);
 }
 function disableNotifService(){
   clearInterval(notifInterval);
