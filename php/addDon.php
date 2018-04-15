@@ -25,7 +25,20 @@
 					
 			}
 			else{
-				//Le don a fonctionner
+				//Le don a fonctionner donc on l'ajoute également au amountCollected du projet
+				$updateProject = $db -> prepare("UPDATE Project SET amountCollected = amountCollected + :dons WHERE Id = :id");
+				$updateProject -> bindValue(":dons",$_POST["amountDon"]);
+				$updateProject -> bindValue(":id",$_POST["projectID"]); //Project ID correspond à l'ID unique du projet dans la table project
+
+				if(!$updateProject -> execute()){
+					throw new PDOException("Can't add the donation".$e -> getMessage());
+				}
+				else{
+					//Le don a été ajouté au projet
+					echo "Thanks!";
+				}
+
+
 			}
 		}
 		catch(PDOException $e){
