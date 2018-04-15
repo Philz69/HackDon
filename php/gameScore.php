@@ -12,7 +12,7 @@
       $totalAmount = $result["sum"];
 
       //Calcul du score
-      $score = (int)(($totalAmount/log($totalAmount, 10)) + ($nbDonations*5) + (log($d  onationAmount, 10)*100));
+      $score = (int)(($totalAmount/log($totalAmount, 10)) + ($nbDonations*5) + (log($donationAmount, 10)*100));
 
       $query_score = $db->prepare("UPDATE accountUser SET Score= Score + :score WHERE ID=:accountID;");
       $query_score->bindParam(":accountID", $accountID);
