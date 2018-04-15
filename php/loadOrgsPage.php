@@ -6,7 +6,7 @@
 
     $data = array();
     $i=0;
-    foreach($db->query("SELECT ID, name, description, bannerImg, code FROM accountOrganisation;") as $row){
+    foreach($db->query("SELECT ID, name, description, bannerImg, code FROM accountOrganisation ORDER BY ID DESC;") as $row){
 
       $projects = $db->query("SELECT name, description, objective FROM project WHERE organisationID=".$row['ID']." && isCompleted=FALSE LIMIT 2;")->fetchAll(PDO::FETCH_ASSOC);
 
