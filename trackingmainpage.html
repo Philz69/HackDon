@@ -8,17 +8,22 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/js/mdb.min.js"></script>
     <script src="js/include.js"></script>
-    <script src="js/loadOrgPages.js"></script>
     <script src="js/connectAjax.js"></script>
     <script src="js/popuphandler.js"></script>
+    <script src="js/tracker_map.js"></script>
+    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBAp4TWLCqhciX5KExTf9ulFjzBGAIuvcY&callback=initMap&libraries=places"></script>
     <body>
         <div class="include-nav"></div>
         <div class="include-login"></div>
 
-        <div class="jumbotron" style="background-image:url(res/lab.jpg)">
+        <div class="jumbotron text-light" style="background:transparent;">
+            
             <h1 class="display-4">Modernisation du laboratoire informatique</h1>
             <p class="lead">Fondation du triolet</p>
+<div id="bg" style="background-image:url(res/bbb.jpg); background-position:center; background-repeat:no-repeat; background-size:cover; height:250px; width:100%; position:absolute; top:0px; left:0px;filter:blur(10px); z-index:-19999;"></div>
         </div>
+        <div class="jumbotron" style="background-color:white;">
         <div class="row">
             <div class="col-3">
                 <div class="card">
@@ -43,7 +48,7 @@
                         </li>
                     </ul>
                     <div class="card-body text-center">
-     <button type="button" class="btn btn-success btn-large">Donner maintenant</button>                   
+                        <button type="button" class="btn btn-success btn-large">Donner maintenant</button>                   
                     </div>
                 </div>
             </div>
@@ -63,6 +68,68 @@
                 </div>
             </div>
         </div>
-        <div class="include-footer"></div>
+        <div class="jumbotron" style="background-color:white;">
+                            <div class="col-12">
+                                <h4 class="display-4">Répartition des dépenses</h4>
+                            </div>
+            <hr>
+       <div class="row padding-top">
+                <div class="col-4">
+                    <div class="card" style="">
+                        <div id="map" style="height:200px;width:100%;"></div>
+                        <div class="card-body">
+                            <h5 class="card-title">Carte d'impact du projet</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-7">
+                    <div class="row align-items-center">
+                        <div class="col-8">
+                            <canvas id="pieChart"></canvas>
+                        </div>
+                        <div class="col-4">
+                                <div class="col-12">
+                                    <span style="background-color: #F7464A;color:#F7464A;margin-right:5px">color</span>
+                                    Ordinateurs ( 71.43% )
+                                </div>
+                                <div class="col-12">
+                                    <span style="background-color: #46BFBD;color:#46BFBD;margin-right:5px">color</span>
+                                    Écrans ( 23.81% )
+                                </div>
+                                <div class="col-12">
+                                <span style="background-color: #FDB45C;color:#FDB45C;margin-right:5px">color</span>
+                                    Clavier ( 2.38% )
+                                </div>
+                                <div class="col-12">
+                                <span style="background-color: #949FB1;color:#949FB1;margin-right:5px">color</span>
+                                    Souris ( 2.38% )
+                                </div>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+
+            </div></div>
+            <script>
+                var ctxP = document.getElementById("pieChart").getContext('2d');
+var myPieChart = new Chart(ctxP, {
+    type: 'doughnut',
+    data: {
+        labels: ['Ordinateurs','Claviers','Écrans','Souris'],
+        datasets: [
+            {
+                data: [300, 100, 10, 10],
+                backgroundColor: ["#F7464A", "#46BFBD", "#FDB45C", "#949FB1", "#4D5360"],
+                hoverBackgroundColor: ["#FF5A5E", "#5AD3D1", "#FFC870", "#A8B3C5", "#616774"]
+            }
+        ]
+    },
+    options: {
+        responsive: true
+    }
+});
+            </script>
+            <div class="include-footer"></div>
     </body>
 </html>
