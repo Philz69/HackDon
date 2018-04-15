@@ -1,11 +1,11 @@
 <?php
-	//Inscription des organismes sur le site 
+	//Inscription des organismes sur le site
 
 	if(!empty($_POST["name"]) && !empty($_POST["mail"]) && !empty($_POST["pwd"]))
 	{
 		require_once("connectionDb.php");
 		$db = connectDb();
-		
+
 		$hash = password_hash($_POST["pwd"], PASSWORD_DEFAULT);
 
 		try{
@@ -13,7 +13,7 @@
 			$createAccount -> bindValue(":name",$_POST["name"]);
 			$createAccount -> bindValue(":mail",$_POST["mail"]);
 			$createAccount -> bindValue(":pwd",$hash);
-			$createAccount -> bindValue(":code","qwerty");
+			$createAccount -> bindValue(":code",hash('sha256', $_POST["name"]));
 			$createAccount -> bindValue(":description","Desc temporaire");
 			$createAccount -> bindValue(":banner","jhasdkjasd");
 
@@ -21,7 +21,7 @@
 				throw new PDOException("Can't execute to register".$e -> getMessage());
 			}
 			else{
-			
+
 				echo "Account created";
 			}
 		}
