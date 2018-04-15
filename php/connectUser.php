@@ -5,7 +5,7 @@
 	{
 		require_once("connectionDb.php");
 		$db = connectDb();
-		
+
 		try{
 			$connectOrg = $db -> prepare("SELECT Id,passwordHash FROM accountUser WHERE email = :mail");
 			$connectOrg -> bindValue(":mail",$_POST["mail"]);
@@ -18,11 +18,11 @@
 
 				if(password_verify($_POST["pwd"],$connectInfos["passwordHash"])){//User's connected
 					$_SESSION["Id_user"] = $connectInfos["Id"];
-					echo "Connected";
+					session_regenerate_id();
 				}
 				else{//Connection didn't work
 					echo "Wrong password/mail";
-				}	
+				}
 			}
 
 

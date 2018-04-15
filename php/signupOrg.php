@@ -20,10 +20,6 @@
 			if(!$createAccount -> execute()){
 				throw new PDOException("Can't execute to register".$e -> getMessage());
 			}
-			else{
-
-				echo "Account created";
-			}
 		}
 		catch(PDOException $e){
 			echo "Can't register".$e-> getMessage();
