@@ -4,42 +4,15 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/bootstrap.css">
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"  ></script>
+    <script src="js/livequery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="js/include.js"></script>
-    <script src="js/connectAjax.js"></script>
+    <script src="js/loginAjax.js"></script>
     <script src="js/popuphandler.js"></script>
     <body>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-            <a class="navbar-brand" href="#">Don</a>
-            <ul class="navbar-nav ml-auto justify-content-end">
-                <li class="nav-item active">
-                    <a class="nav-link" href="index.html">Acceuil</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="orgs.html">Organisatiosn</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="track.html">tracker</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="orgadmin.html">orgadmin</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#" data-toggle="modal" data-target="#exampleModalCenter">Log in / Sign up</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">placeholder</a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">placeholder</a>
-                        <a class="dropdown-item" href="#">placeholder</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">placeholder</a>
-                    </div>
-                </li>
-            </ul>
-        </nav>
-
+        <div class="include-nav fixed-top"></div>
+        <div class="include-login"></div>
 
         <div class="container-fluid">
                 <div class="col-sm-2 bg-dark sidebar hidden-xs">
@@ -253,6 +226,9 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="include-footer">
+            
             </div>
 
     </body>

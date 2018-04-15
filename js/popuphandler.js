@@ -1,4 +1,5 @@
 $( document ).ready(function() {
+    $("#usrswitchbtn").livequery(function(){
     $('#loginUsr').hide();
     $('#loginOrg').hide();
     $('#signupOrg').hide();
@@ -54,5 +55,7 @@ $( document ).ready(function() {
         }
     });
 
-    console.log( "ready!" );
+});
+
+
 });
