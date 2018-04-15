@@ -19,10 +19,11 @@
 				url: "php/addDon.php",
 				method: "POST",
 				data: {
-					amountDon: document.getElementById("donate").value,
-					projectID: document.getElementById("btnSubmit").classList[0].split("donation")[1],
+					"amountDon": document.getElementById("donate").value,
+					"projectID": document.getElementById("btnSubmit").classList[0].split("donation")[1],
 				},
 				success: function(msg){
+					console.log(msg);
 					if(msg != ""){
 						//Le don a fonctionner
 					}
