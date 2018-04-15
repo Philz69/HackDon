@@ -76,7 +76,7 @@ $(document).ready(function(){
   });
 
   //Add the autocomplete
-  new google.maps.places.Autocomplete(document.getElementById("addressInput"), {types: ['geocode']});
+  new google.maps.places.Autocomplete(document.getElementById("addressInput"));
 });
 
 function addLocationToDB(address, latlngStr){
